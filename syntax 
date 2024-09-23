@@ -1,0 +1,5 @@
+byte 1byte
+word 2byte
+doubleword 4byte
+quadword 8byte
+doublequadword 16byte
