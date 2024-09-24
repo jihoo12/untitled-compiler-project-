@@ -13,19 +13,22 @@ fn main() {
 
     let file_path = &args[1];
     
-    if let Ok(lines) = read_lines(file_path) {
-        let mut lines_vec: Vec<String> = Vec::new();
-        
+    let mut lines_vec: Vec<String> = Vec::new(); // 벡터를 if let 바깥에서 선언
+
+    if let Ok(lines) = read_lines(file_path) {        
         for line in lines {
             if let Ok(content) = line {
                 lines_vec.push(content);
             }
         }
-       
     } else {
         eprintln!("Could not read file: {}", file_path);
     }
-    //main
+
+    // 이제 여기서 lines_vec에 접근할 수 있습니다.
+    for line in &lines_vec {
+        println!("{}", line);
+    }
 }
 
 // 파일의 각 줄을 읽어오는 함수
