@@ -25,6 +25,7 @@ fn main() {
     } else {
         eprintln!("Could not read file: {}", file_path);
     }
+    //main
 }
 
 // 파일의 각 줄을 읽어오는 함수
