@@ -27,6 +27,8 @@ fn main() {
 
     // 이제 여기서 lines_vec에 접근할 수 있습니다.
     for line in &lines_vec {
+    if line.starts_with("byte") {
+
     }
 }
 
