@@ -26,9 +26,9 @@ r+i ## use 64bit register+immediate value(r+i = memory address)
 r ## 64bit register prefix 
 -
 -usage
-m i a > b ## a = 64bit address,b=64bit immediate value 
-r r-i a > b ## a = 64bit register,b= 64bit register-immdate value (ex r r-i rax > rax-1)
-s r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
+m,i a > b ## a = 64bit address,b=64bit immediate value 
+r,r-i a > b ## a = 64bit register,b= 64bit register-immdate value (ex r r-i rax > rax-1)
+s,r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 -
 -pland
 shift
