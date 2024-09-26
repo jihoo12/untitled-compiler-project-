@@ -22,3 +22,6 @@ r ## register prefix
 m i a > b ## a = 64bit address,b=64bit immediate value 
 r r-i a > b ## a = 64bit register,b= 64bit register-immdate value (ex r r-i rax > rax-1)
 -
+-notes
+sib Effective Address=(Base)+(Index×Scale)+Displacement
+-
