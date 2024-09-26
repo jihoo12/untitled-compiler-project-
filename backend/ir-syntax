@@ -1,3 +1,4 @@
+-common syntax 
 a > b ## put a to b (a = 64bit immediate value,b = 64bit register)
 a == b ## compare a and b (a,b = 64bit register)
 a-b ## assembly sub a,b (a,b = 64bit register)
@@ -8,4 +9,9 @@ a/b ## assembly div a,b (a,b = 64bit register)
 < a ## return a (a = 64bit address)
 leave ## assembly leave
 syscall ## assembly syscall
+-
+-prefix
+b ## use native binary 
+m ## use memory address 
+s ## use sib address 
 
