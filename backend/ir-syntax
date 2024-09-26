@@ -16,6 +16,7 @@ a & b ## assembly and a,b ,if no prefix then a,b = 64bit register
 a | b ## assembly or a,b ,if no prefix then a,b = 64bit register 
 a ^ b ## assembly xor a,b ,if no prefix theb a,b = 64bit register 
 ~a ## assembly not a ,if no prefix a = 64bit register 
+enter ## assembly enter 
 -
 -prefix
 m ## use memory address 
