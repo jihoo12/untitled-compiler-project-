@@ -1,15 +1,17 @@
 -common syntax 
-a > b ## put a to b (a = 64bit immediate value,b = 64bit register)
-a == b ## compare a and b (a,b = 64bit register)
-a-b ## assembly sub a,b (a,b = 64bit register)
-a+b ## assembly add a,b (a,b = 64bit register)
-a*b ## assembly mul a,b (a,b = 64bit register)
-a/b ## assembly div a,b (a,b = 64bit register)
+a > b ## put a to b ,if no prefix (a = 64bit immediate value,b = 64bit register)
+a == b ## compare a and b ,if no prefix then (a,b = 64bit register)
+a-b ## assembly sub a,b ,if no prefix then (a,b = 64bit register)
+a+b ## assembly add a,b ,if no prefix then (a,b = 64bit register)
+a*b ## assembly mul a,b ,if no prefix then (a,b = 64bit register)
+a/b ## assembly div a,b ,if no prefix then (a,b = 64bit register)
 .a ## call a (a = 64bit address)
-< a ## return a (a = 64bit address)
-~a if carry flags set then jump a (a is 64bit address)
+~a if carry flags set then jump a (a = 64bit address)
+@ ## assembly ret
 leave ## assembly leave
 syscall ## assembly syscall
+push a ## assembly push a 
+pop b ## assembly pop b ,if no prefix then (b = 64bit register)
 -
 -prefix
 m ## use memory address 
