@@ -7,6 +7,7 @@ a*b ## assembly mul a,b (a,b = 64bit register)
 a/b ## assembly div a,b (a,b = 64bit register)
 .a ## call a (a = 64bit address)
 < a ## return a (a = 64bit address)
+~a if carry flags set then jump a (a is 64bit address)
 leave ## assembly leave
 syscall ## assembly syscall
 -
