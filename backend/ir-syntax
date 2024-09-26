@@ -12,16 +12,17 @@ leave ## assembly leave
 syscall ## assembly syscall
 push a ## assembly push a 
 pop b ## assembly pop b ,if no prefix then (b = 64bit register)
-a & b ## assembly and a,b
-a | b ## assembly or a,b
-a ^ b ## assembly xor a,b
+a & b ## assembly and a,b ,if no prefix then a,b = 64bit register 
+a | b ## assembly or a,b ,if no prefix then a,b = 64bit register 
+a ^ b ## assembly xor a,b ,if no prefix theb a,b = 64bit register 
+~a ## assembly not a ,if no prefix a = 64bit register 
 -
 -prefix
 m ## use memory address 
 s ## use sib address 
 i ## use immediate value 
-r-i ## use register-immediate value(r-i = memory address)
-r+i ## use register+immediate value(r+i = memory address)
+r-i ## use 64bit register-immediate value(r-i = memory address)
+r+i ## use 64bit register+immediate value(r+i = memory address)
 r ## 64bit register prefix 
 -
 -usage
@@ -30,7 +31,6 @@ r r-i a > b ## a = 64bit register,b= 64bit register-immdate value (ex r r-i rax 
 s r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 -
 -pland
-not
 shift
 -notes
 sib Effective Address=(Base)+(Index×Scale)+Displacement
