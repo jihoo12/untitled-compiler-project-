@@ -11,9 +11,10 @@ leave ## assembly leave
 syscall ## assembly syscall
 -
 -prefix
-b ## use native binary 
 m ## use memory address 
 s ## use sib address 
 i ## use immediate value 
 -
-
+-usage
+m-i a > b ## a = 64bit address,b=64bit immediate value 
+-
