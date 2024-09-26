@@ -14,5 +14,6 @@ syscall ## assembly syscall
 b ## use native binary 
 m ## use memory address 
 s ## use sib address 
+i ## use immediate value 
 -
 
