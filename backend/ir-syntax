@@ -33,6 +33,9 @@ s,r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 -
 -pland
 shift
+jz
+jnz
+jg
 -
 -notes
 sib Effective Address=(Base)+(Index×Scale)+Displacement
