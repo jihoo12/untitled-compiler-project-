@@ -6,12 +6,15 @@ a+b ## assembly add a,b ,if no prefix then (a,b = 64bit register)
 a*b ## assembly mul a,b ,if no prefix then (a,b = 64bit register)
 a/b ## assembly div a,b ,if no prefix then (a,b = 64bit register)
 .a ## call a (a = 64bit address)
-~a if carry flags set then jump a (a = 64bit address)
+=a if carry flags set then jump a (a = 64bit address)
 @ ## assembly ret
 leave ## assembly leave
 syscall ## assembly syscall
 push a ## assembly push a 
 pop b ## assembly pop b ,if no prefix then (b = 64bit register)
+a & b ## assembly and a,b
+a | b ## assembly or a,b
+a ^ b ## assembly xor a,b
 -
 -prefix
 m ## use memory address 
@@ -27,9 +30,6 @@ r r-i a > b ## a = 64bit register,b= 64bit register-immdate value (ex r r-i rax 
 s r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 -
 -pland
-and
-or
-xor
 not
 shift
 -notes
