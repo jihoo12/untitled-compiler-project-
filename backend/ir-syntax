@@ -54,16 +54,6 @@
  r ## 64bit register prefix 
  n ## no prefix use
 --pland
- JG
- JA
- JL
- JB
- JO
- JNO
- JS
- JNS
- JC
- JNC
 --notes
  sib Effective Address=Base+(Index×Scale)+Displacement
 JG (Jump if Greater): Jumps if the first operand is greater than the second operand in a signed comparison.
