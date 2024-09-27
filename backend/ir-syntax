@@ -1,24 +1,29 @@
 ---ir-syntax
 --common syntax 
-a > b ## put a to b ,if no prefix (a = 64bit register,b = 64bit register)
-a == b ## compare a and b ,if no prefix then (a,b = 64bit register)
+-arithmetic instructions
 a-b ## assembly sub a,b ,if no prefix then (a,b = 64bit register)
 a+b ## assembly add a,b ,if no prefix then (a,b = 64bit register)
 a*b ## assembly mul a,b ,if no prefix then (a,b = 64bit register)
 a/b ## assembly div a,b ,if no prefix then (a,b = 64bit register)
-.a ## call a (a = 64bit address)
-=a ## if carry flags set then jump a (a = 64bit address)
-!a ## if carry flags not set then jump a (a=64bit register)
-@ ## assembly ret
-leave ## assembly leave
-syscall ## assembly syscall
-push a ## assembly push a 
-pop b ## assembly pop b ,if no prefix then (b = 64bit register)
 a & b ## assembly and a,b ,if no prefix then a,b = 64bit register 
 a | b ## assembly or a,b ,if no prefix then a,b = 64bit register 
 a ^ b ## assembly xor a,b ,if no prefix theb a,b = 64bit register 
 ~a ## assembly not a ,if no prefix a = 64bit register 
-enter ## assembly enter 
+-unconditional jump instruction
+.a ## call a (a = 64bit address)
+-conditional branch instructions
+a == b ## compare a and b ,if no prefix then (a,b = 64bit register)
+=a ## if carry flags set then jump a (a = 64bit address)
+!a ## if carry flags not set then jump a (a=64bit register)
+-control flow instructions
+enter ## assembly enter
+@ ## assembly ret
+leave ## assembly leave
+syscall ## assembly syscall
+-data transfer instructions
+a > b ## put a to b ,if no prefix (a = 64bit register,b = 64bit register)
+push a ## assembly push a 
+pop b ## assembly pop b ,if no prefix then (b = 64bit register)
 --
 --prefix
 m ## use memory address 
