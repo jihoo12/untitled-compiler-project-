@@ -1,4 +1,4 @@
----ir-syntax
+--- IR Syntax Definition ---
 --syntax
 prefix command
 -example
