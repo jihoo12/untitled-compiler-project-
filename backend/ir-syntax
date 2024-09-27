@@ -32,6 +32,7 @@ i ## use immediate value
 r-i ## use 64bit register-immediate value(r-i = memory address)
 r+i ## use 64bit register+immediate value(r+i = memory address)
 r ## 64bit register prefix 
+n ## no prefix use
 --
 --usage
 m,i a > b ## a = 64bit address,b=64bit immediate value 
