@@ -1,4 +1,5 @@
--common syntax 
+---ir-syntax
+--common syntax 
 a > b ## put a to b ,if no prefix (a = 64bit register,b = 64bit register)
 a == b ## compare a and b ,if no prefix then (a,b = 64bit register)
 a-b ## assembly sub a,b ,if no prefix then (a,b = 64bit register)
@@ -18,21 +19,21 @@ a | b ## assembly or a,b ,if no prefix then a,b = 64bit register
 a ^ b ## assembly xor a,b ,if no prefix theb a,b = 64bit register 
 ~a ## assembly not a ,if no prefix a = 64bit register 
 enter ## assembly enter 
--
--prefix
+--
+--prefix
 m ## use memory address 
 s ## use sib address 
 i ## use immediate value 
 r-i ## use 64bit register-immediate value(r-i = memory address)
 r+i ## use 64bit register+immediate value(r+i = memory address)
 r ## 64bit register prefix 
--
--usage
+--
+--usage
 m,i a > b ## a = 64bit address,b=64bit immediate value 
 r,r-i a > b ## a = 64bit register,b= 64bit register-immdate value (ex r r-i rax > rax-1)
 s,r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
--
--pland
+--
+--pland
 JG
 JA
 JL
@@ -46,7 +47,8 @@ JNC
 JZ
 JNZ
 shift
--
--notes
+--
+--notes
 sib Effective Address=(Base)+(Index×Scale)+Displacement
--
+--
+---
