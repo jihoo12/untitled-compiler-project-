@@ -7,8 +7,8 @@
   s,r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 --command
  -arithmetic instructions
-  a-b ## assembly sub a,b ,if no prefix  then (a,b = 64bit register)
-  a+b ## assembly add a,b ,if no prefix  then (a,b = 64bit register)
+  a-b ## assembly sub a,b ,if no prefix then (a,b = 64bit register)
+  a+b ## assembly add a,b ,if no prefix then (a,b = 64bit register)
   a*b ## assembly mul a,b ,if no prefix then (a,b = 64bit register)
   a/b ## assembly div a,b ,if no prefix then (a,b = 64bit register)
   a & b ## assembly and a,b ,if no prefix then a,b = 64bit register 
