@@ -50,9 +50,6 @@
  JNS
  JC
  JNC
- JZ
- JNZ
- shift
 --notes
  sib Effective Address=Base+(Index×Scale)+Displacement
 JG (Jump if Greater): Jumps if the first operand is greater than the second operand in a signed comparison.
