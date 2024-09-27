@@ -6,7 +6,8 @@ a+b ## assembly add a,b ,if no prefix then (a,b = 64bit register)
 a*b ## assembly mul a,b ,if no prefix then (a,b = 64bit register)
 a/b ## assembly div a,b ,if no prefix then (a,b = 64bit register)
 .a ## call a (a = 64bit address)
-=a if carry flags set then jump a (a = 64bit address)
+=a ## if carry flags set then jump a (a = 64bit address)
+!a ## if carry flags not set then jump a (a=64bit register)
 @ ## assembly ret
 leave ## assembly leave
 syscall ## assembly syscall
@@ -33,8 +34,6 @@ s,r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 -
 -pland
 shift
-jnz
-jg
 -
 -notes
 sib Effective Address=(Base)+(Index×Scale)+Displacement
