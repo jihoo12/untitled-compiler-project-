@@ -1,5 +1,5 @@
 -common syntax 
-a > b ## put a to b ,if no prefix (a = 64bit immediate value,b = 64bit register)
+a > b ## put a to b ,if no prefix (a = 64bit register,b = 64bit register)
 a == b ## compare a and b ,if no prefix then (a,b = 64bit register)
 a-b ## assembly sub a,b ,if no prefix then (a,b = 64bit register)
 a+b ## assembly add a,b ,if no prefix then (a,b = 64bit register)
