@@ -17,10 +17,11 @@
   ~a ## assembly not a ,if no prefix then a = 64bit register 
  -unconditional jump instruction
   .a ## call a (a = 64bit address)
+  jmp a ## jmp a (a = 64bit address)
  -conditional branch instructions
   a == b ## compare a and b ,if no prefix then (a,b = 64bit register)
-  =a ## if carry flags set then jump a (a = 64bit address)
-  !a ## if carry flags not set then jump  a (a=64bit register)
+  =a ## if zero flags set then jump a (a = 64bit address)
+  !a ## if zero flags not set then jump  a (a=64bit register)
  -control flow instructions
   enter ## assembly enter
   @ ## assembly ret
