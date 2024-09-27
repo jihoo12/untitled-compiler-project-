@@ -7,25 +7,25 @@
   s,r base+(index*scale)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 --command
  -arithmetic instructions
-  a-b ## assembly sub a,b ,not available prefix a={i},b={}
-  a+b ## assembly add a,b ,not available prefix a={i},b={}
-  a*b ## assembly mul a,b ,not available prefix a={i},b={}
-  a/b ## assembly div a,b ,not available prefix a={i},b={}
-  a & b ## assembly and a,b ,not available prefix a={i},b={}
-  a | b ## assembly or a,b ,not available prefix a={i},b={}
-  a ^ b ## assembly xor a,b ,not available prefix a={i},b={}
-  ~a ## assembly not a not available prefix a={i}
-  shl a b ## left shit (b=immediate value),not available prefix a={i}
-  shr a b ## right shit (b=immediate value),not available prefix a={i}
-  rol a b ## rotate left (b=immediate value),not available prefix a={i}
-  ror a b ## rotate right (b=immediate value),not available prefix a={i}
+  - a,b ## assembly sub a,b ,not available prefix a={i},b={}
+  + a,b ## assembly add a,b ,not available prefix a={i},b={}
+  * a,b ## assembly mul a,b ,not available prefix a={i},b={}
+  / a,b ## assembly div a,b ,not available prefix a={i},b={}
+  & a,b ## assembly and a,b ,not available prefix a={i},b={}
+  | a,b ## assembly or a,b ,not available prefix a={i},b={}
+  ^ a,b ## assembly xor a,b ,not available prefix a={i},b={}
+  ~ a ## assembly not a not available prefix a={i}
+  shl a,b ## left shit (b=immediate value),not available prefix a={i}
+  shr a,b ## right shit (b=immediate value),not available prefix a={i}
+  rol a,b ## rotate left (b=immediate value),not available prefix a={i}
+  ror a,b ## rotate right (b=immediate value),not available prefix a={i}
  -unconditional jump instruction
-  .a ## call a (a = 64bit address)
+  . a ## call a (a = 64bit address)
   jmp a ## jmp a (a = 64bit address)
  -conditional branch instructions
-  a == b ## compare a and b not available prefix a={i},b={}
-  =a ## if zero flags set then jump a (a = 64bit address)
-  !a ## if zero flags not set then jump  a (a=64bit register)
+  == a,b ## compare a and b not available prefix a={i},b={}
+  jz a ## if zero flags set then jump a (a = 64bit address)
+  jnz a ## if zero flags not set then jump  a (a=64bit register)
   jg a ##(a=64bit address) 
   ja a ##(a=64bit address)
   jl a ##(a=64bit address)
@@ -38,11 +38,11 @@
   jnc a ##(a=64bit address)
  -control flow instructions
   enter ## assembly enter
-  @ ## assembly ret
+  ret ## assembly ret
   leave ## assembly leave
   syscall ## assembly syscall
  -data transfer instructions
-  a > b ## put a to b ,not available prefix a={},b={i}
+  = a,b ## put a to b ,not available prefix a={},b={i}
   push a ## assembly push a
   pop a ## assembly pop b ,not available prefix a={i}
 --prefix
