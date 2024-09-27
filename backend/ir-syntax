@@ -14,7 +14,11 @@
   a & b ## assembly and a,b ,if no prefix then a,b = 64bit register 
   a | b ## assembly or a,b ,if no prefix then a,b = 64bit register 
   a ^ b ## assembly xor a,b ,if no prefix then a,b = 64bit register 
-  ~a ## assembly not a ,if no prefix then a = 64bit register 
+  ~a ## assembly not a ,if no prefix then a = 64bit register
+  shl a b ## left shit (b=immediate value)
+  shr a b ## right shit (b=immediate value)
+  rol a b ## rotate left (b=immediate value)
+  ror a b ## rotate right (b=immediate value)
  -unconditional jump instruction
   .a ## call a (a = 64bit address)
   jmp a ## jmp a (a = 64bit address)
