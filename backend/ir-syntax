@@ -54,5 +54,5 @@
  JNZ
  shift
 --notes
- sib Effective Address=(Base (Index×Scale)+Displacement
+ sib Effective Address=Base+(Index×Scale)+Displacement
 ---
