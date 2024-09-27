@@ -26,16 +26,16 @@
   a == b ## compare a and b not available prefix a={i},b={}
   =a ## if zero flags set then jump a (a = 64bit address)
   !a ## if zero flags not set then jump  a (a=64bit register)
-  JG a ##(a=64bit address) 
-  JA a ##(a=64bit address)
-  JL a ##(a=64bit address)
-  JB a ##(a=64bit address)
-  JO a ##(a=64bit address)
-  JNO a ##(a=64bit address)
-  JS a ##(a=64bit address)
-  JNS a ##(a=64bit address)
-  JC a ##(a=64bit address)
-  JNC a ##(a=64bit address)
+  jg a ##(a=64bit address) 
+  ja a ##(a=64bit address)
+  jl a ##(a=64bit address)
+  jb a ##(a=64bit address)
+  jo a ##(a=64bit address)
+  jno a ##(a=64bit address)
+  js a ##(a=64bit address)
+  jns a ##(a=64bit address)
+  jc a ##(a=64bit address)
+  jnc a ##(a=64bit address)
  -control flow instructions
   enter ## assembly enter
   @ ## assembly ret
