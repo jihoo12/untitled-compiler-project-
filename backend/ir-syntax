@@ -33,6 +33,18 @@ r,r-i a > b ## a = 64bit register,b= 64bit register-immdate value (ex r r-i rax 
 s,r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 -
 -pland
+JG
+JA
+JL
+JB
+JO
+JNO
+JS
+JNS
+JC
+JNC
+JZ
+JNZ
 shift
 -
 -notes
