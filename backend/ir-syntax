@@ -55,4 +55,16 @@
  shift
 --notes
  sib Effective Address=Base+(Index×Scale)+Displacement
+JG (Jump if Greater): Jumps if the first operand is greater than the second operand in a signed comparison.
+JA (Jump if Above): Jumps if the first operand is greater than the second operand in an unsigned comparison.
+JL (Jump if Less): Jumps if the first operand is less than the second operand in a signed comparison.
+JB (Jump if Below): Jumps if the first operand is less than the second operand in an unsigned comparison.
+JO (Jump if Overflow): Jumps if the overflow flag (OF) is set.
+JNO (Jump if Not Overflow): Jumps if the overflow flag (OF) is not set.
+JS (Jump if Sign): Jumps if the sign flag (SF) is set, indicating a negative result.
+JNS (Jump if Not Sign): Jumps if the sign flag (SF) is not set, indicating a non-negative result.
+JC (Jump if Carry): Jumps if the carry flag (CF) is set.
+JNC (Jump if Not Carry): Jumps if the carry flag (CF) is not set.
+JZ (Jump if Zero): Jumps if the zero flag (ZF) is set, indicating equality or a zero result.
+JNZ (Jump if Not Zero): Jumps if the zero flag (ZF) is not set, indicating inequality or a non-zero result.
 ---
