@@ -1,5 +1,11 @@
 ---ir-syntax
---common syntax 
+--syntax
+prefix command
+-example
+m,i a > b ## a = 64bit address,b=64bit immediate value 
+r,r-i a > b ## a = 64bit register,b= 64bit register-immdate value (ex r r-i rax > rax-1)
+s,r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
+--command
 -arithmetic instructions
 a-b ## assembly sub a,b ,if no prefix then (a,b = 64bit register)
 a+b ## assembly add a,b ,if no prefix then (a,b = 64bit register)
@@ -24,7 +30,6 @@ syscall ## assembly syscall
 a > b ## put a to b ,if no prefix (a = 64bit register,b = 64bit register)
 push a ## assembly push a 
 pop b ## assembly pop b ,if no prefix then (b = 64bit register)
---
 --prefix
 m ## use memory address 
 s ## use sib address 
@@ -33,12 +38,6 @@ r-i ## use 64bit register-immediate value(r-i = memory address)
 r+i ## use 64bit register+immediate value(r+i = memory address)
 r ## 64bit register prefix 
 n ## no prefix use
---
---usage
-m,i a > b ## a = 64bit address,b=64bit immediate value 
-r,r-i a > b ## a = 64bit register,b= 64bit register-immdate value (ex r r-i rax > rax-1)
-s,r base+(index*sclae)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
---
 --pland
 JG
 JA
@@ -53,8 +52,6 @@ JNC
 JZ
 JNZ
 shift
---
 --notes
 sib Effective Address=(Base)+(Index×Scale)+Displacement
---
 ---
