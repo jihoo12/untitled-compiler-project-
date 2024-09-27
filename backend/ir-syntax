@@ -7,23 +7,23 @@
   s,r base+(index*scale)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 --command
  -arithmetic instructions
-  a-b ## assembly sub a,b
-  a+b ## assembly add a,b
-  a*b ## assembly mul a,b
-  a/b ## assembly div a,b
-  a & b ## assembly and a,b 
-  a | b ## assembly or a,b 
-  a ^ b ## assembly xor a,b
-  ~a ## assembly not a 
-  shl a b ## left shit (b=immediate value)
-  shr a b ## right shit (b=immediate value)
-  rol a b ## rotate left (b=immediate value)
-  ror a b ## rotate right (b=immediate value)
+  a-b ## assembly sub a,b ,not available prefix a={i},b={}
+  a+b ## assembly add a,b ,not available prefix a={i},b={}
+  a*b ## assembly mul a,b ,not available prefix a={i},b={}
+  a/b ## assembly div a,b ,not available prefix a={i},b={}
+  a & b ## assembly and a,b ,not available prefix a={i},b={}
+  a | b ## assembly or a,b ,not available prefix a={i},b={}
+  a ^ b ## assembly xor a,b ,not available prefix a={i},b={}
+  ~a ## assembly not a not available prefix a={i}
+  shl a b ## left shit (b=immediate value),not available prefix a={i}
+  shr a b ## right shit (b=immediate value),not available prefix a={i}
+  rol a b ## rotate left (b=immediate value),not available prefix a={i}
+  ror a b ## rotate right (b=immediate value),not available prefix a={i}
  -unconditional jump instruction
   .a ## call a (a = 64bit address)
   jmp a ## jmp a (a = 64bit address)
  -conditional branch instructions
-  a == b ## compare a and b
+  a == b ## compare a and b not available prefix a={i},b={}
   =a ## if zero flags set then jump a (a = 64bit address)
   !a ## if zero flags not set then jump  a (a=64bit register)
  -control flow instructions
@@ -32,9 +32,9 @@
   leave ## assembly leave
   syscall ## assembly syscall
  -data transfer instructions
-  a > b ## put a to b
-  push a ## assembly push a 
-  pop b ## assembly pop b 
+  a > b ## put a to b ,not available prefix a={},b={i}
+  push a ## assembly push a
+  pop a ## assembly pop b ,not available prefix a={i}
 --prefix
  m ## use memory address 
  s ## use sib address 
