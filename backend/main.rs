@@ -42,9 +42,9 @@ fn ir(s: &String) {
          },
          "n" => {
              match command {
-                 "enter" => {},
+                 "init" => {},
                  "ret" => {},
-                 "leave" => {},
+                 "clean" => {},
                  "syscall" => {},
                  _ => {}, //error
              }
