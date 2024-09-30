@@ -42,6 +42,10 @@ fn ir(s: &String) {
          },
          "n" => {
              //prefix2 = n
+             //enter ## assembly enter
+             //ret ## assembly ret
+             //leave ## assembly leave
+             //syscall ## assembly syscall
          },
          "r" => {
              match prefix2 {
