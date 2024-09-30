@@ -45,7 +45,9 @@ fn ir(s: &String) {
                  "init" => {
                      println!("554889E5");
                  },
-                 "ret" => {},
+                 "ret" => {
+                     println!("C3");
+                 },
                  "clean" => {},
                  "syscall" => {},
                  _ => {}, //error
