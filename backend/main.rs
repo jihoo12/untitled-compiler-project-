@@ -24,6 +24,6 @@ fn ir(s: &String) {
     let word = first_word(s);
     let start_word = s[..word];
     let colon = findprefix(s);
-    let prefix1 = start_word[..colon]
-    let prefix2 = start_word[colon..]
+    let prefix1 = start_word[..colon];
+    let prefix2 = start_word[colon+1..];
 } 
