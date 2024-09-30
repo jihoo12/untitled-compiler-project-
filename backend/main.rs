@@ -42,7 +42,9 @@ fn ir(s: &String) {
          },
          "n" => {
              match command {
-                 "init" => {},
+                 "init" => {
+                     println!("554889E5");
+                 },
                  "ret" => {},
                  "clean" => {},
                  "syscall" => {},
