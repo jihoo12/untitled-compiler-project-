@@ -33,9 +33,9 @@
   jc a ##(a=64bit address)
   jnc a ##(a=64bit address)
  -control flow instructions
-  enter ## assembly enter
+  init ## init stack
   ret ## assembly ret
-  leave ## assembly leave
+  clean ## cleanup stack
   syscall ## assembly syscall
  -data transfer instructions
   mov a,b ## put a to b ,not available prefix a={},b={i}
