@@ -1,10 +1,6 @@
 --- IR Syntax Definition ---
 --syntax
  prefix command
- -example
-  m,i a > b ## a = 64bit address,b=64bit immediate value 
-  r,r-i a > b ## a = 64bit register,b= 64bit register-immediate value (ex r r-i rax > rax-1)
-  s,r base+(index*scale)+displacement > b (ex s r rbx+(rcx*4)+8 > rax)
 --command
  -arithmetic instructions
   - a,b ## assembly sub a,b ,not available prefix a={i},b={}
@@ -42,7 +38,7 @@
   leave ## assembly leave
   syscall ## assembly syscall
  -data transfer instructions
-  = a,b ## put a to b ,not available prefix a={},b={i}
+  mov a,b ## put a to b ,not available prefix a={},b={i}
   push a ## assembly push a
   pop a ## assembly pop b ,not available prefix a={i}
 --prefix
