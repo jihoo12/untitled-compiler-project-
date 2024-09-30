@@ -1,2 +1,3 @@
-fn main() {
+fn ir(let v) {
+    
 } 
