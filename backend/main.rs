@@ -51,7 +51,9 @@ fn ir(s: &String) {
                  "clean" => {
                      println!("4889EC5D");
                  },
-                 "syscall" => {},
+                 "syscall" => {
+                     println!("0F05");
+                 },
                  _ => {}, //error
              }
              //prefix2 = n
