@@ -54,7 +54,9 @@ fn ir(s: &String) {
                  "syscall" => {
                      println!("0F05");
                  },
-                 _ => {}, //error
+                 _ => {
+                    println!("error syntax error");
+                 }, //error
              }
              //prefix2 = n
              //enter ## assembly enter
