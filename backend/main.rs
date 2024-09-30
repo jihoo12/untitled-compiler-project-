@@ -34,7 +34,6 @@ fn ir(s: &String) {
     match prefix1 {
          "s" => {
              match prefix2 {
-                "i" => {},
                 "r" => {},
                 "m" => {},
                 _ => {}, //error 
