@@ -92,7 +92,6 @@ fn ir(s: &String) {
          },
          "m" => {
              match prefix2 {
-                 "s" => {},
                  "n" => {},
                  "i" => {},
                  "r" => {},
