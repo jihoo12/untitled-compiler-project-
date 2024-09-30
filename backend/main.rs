@@ -33,11 +33,8 @@ fn ir(s: &String) {
     let commandargs = &syntax[slice+1..];
     match prefix1 {
          "s" => {
-             match prefix2 {
-                "r" => {},
-                "m" => {},
-                _ => {}, //error 
-             }
+             //prefix2= r
+             //only register available 
          },
          "n" => {
              match command {
