@@ -41,16 +41,7 @@ fn ir(s: &String) {
              }
          },
          "n" => {
-             match prefix2 {
-                "s" => {},
-                "n" => {},
-                "i" => {},
-                "r" => {},
-                "r+i" => {},
-                "r-i" => {},
-                "m" => {},
-                _ => {}, //error 
-             }
+             //prefix2 = n
          },
          "r" => {
              match prefix2 {
