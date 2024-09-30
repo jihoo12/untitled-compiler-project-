@@ -20,10 +20,10 @@
   rol a,b ## rotate left (b=immediate value),not available prefix a={i}
   ror a,b ## rotate right (b=immediate value),not available prefix a={i}
  -unconditional jump instruction
-  . a ## call a (a = 64bit address)
+  call a ## call a (a = 64bit address)
   jmp a ## jmp a (a = 64bit address)
  -conditional branch instructions
-  == a,b ## compare a and b not available prefix a={i},b={}
+  cmp a,b ## compare a and b not available prefix a={i},b={}
   jz a ## if zero flags set then jump a (a = 64bit address)
   jnz a ## if zero flags not set then jump  a (a=64bit register)
   jg a ##(a=64bit address) 
