@@ -27,6 +27,7 @@ fn ir(s: &String) {
     let colon = findprefix(s);
     let prefix1 = &start_word[..colon];
     let prefix2 = &start_word[colon+1..];
+    let command = &s[word+1..];
     match prefix1 {
          "s" => {
              match prefix2 {
