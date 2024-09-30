@@ -41,6 +41,13 @@ fn ir(s: &String) {
              }
          },
          "n" => {
+             match command {
+                 "enter" => {},
+                 "ret" => {},
+                 "leave" => {},
+                 "syscall" => {},
+                 _ => {}, //error
+             }
              //prefix2 = n
              //enter ## assembly enter
              //ret ## assembly ret
