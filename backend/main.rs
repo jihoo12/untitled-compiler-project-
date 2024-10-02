@@ -96,14 +96,7 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
              }
          },
          "m" => {
-             match prefix2 {
-                 "n" => {},
-                 "i" => {},
-                 "r" => {},
-                 "r+i" => {},
-                 "r-i" => {},
-                 _ => {}, //error 
-             }
+             //prefix2=n
          },
          _ => {}, //error 
     }
