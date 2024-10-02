@@ -53,9 +53,9 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
                  "s" => {
                      let sib;
                      if !args.isdisp {
-                         sib = 04 + (8 * args.reg2) + (4 * args.scale) + (8 * args.index) + (8 * args.base);
+                         sib = 04 + (8 * args.reg1) + (4 * args.scale) + (8 * args.index) + (8 * args.base);
                      }else {
-                         sib = 44 + (8*args.reg2)+(4*args.scale)+(8*args.index)+(8*args.base)+args.displacement8;
+                         sib = 44 + (8*args.reg1)+(4*args.scale)+(8*args.index)+(8*args.base)+args.displacement8;
                      }
                      match command {
                          "mov" => {
@@ -65,7 +65,9 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
                  },
                  "n" => {},
                  "i" => {},
-                 "r" => {},
+                 "r" => {
+                 
+                 },
                  "r+i" => {},
                  "r-i" => {},
                  "m" => {},
