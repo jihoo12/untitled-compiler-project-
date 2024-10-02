@@ -21,10 +21,10 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
              match command {
                 "mov" = > {
                     if (args.isdisp == TRUE) {
-
-}else {
-}
-                }
+                    
+                    }else {
+                    }
+                },
              }
          },
          "n" => {
