@@ -1,25 +1,3 @@
-fn first_word(s: &String) -> usize {
-    let bytes = s.as_bytes();
-
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return i;
-        }
-    }
-
-    s.len()
-}
-fn findprefix(s: &String) -> usize {
-    let bytes = s.as_bytes();
-
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b',' {
-            return i;
-        }
-    }
-
-    s.len()
-}
 fn ir(prefix1: &str, prefix2: &str, command: &str,arg1: &str,arg2: &str) {
     match prefix1 {
          "s" => {
