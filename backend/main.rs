@@ -31,13 +31,13 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
                      out = 554889E5
                  },
                  "ret" => {
-                     out = C3
+                     out = C3;
                  },
                  "clean" => {
-                     out = 4889EC5D
+                     out = 4889EC5D;
                  },
                  "syscall" => {
-                     out = 0F05
+                     out = 0F05;
                  },
                  _ => {
                     println!("error syntax error");
@@ -69,7 +69,7 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
                  "r" => {
                      match command {
                          "mov" => {
-                            out = 4889C0+reg1+(8*reg2);
+                            out = 4889C0+args.reg1+(8*args.reg2);
                          },
                      }
                  },
