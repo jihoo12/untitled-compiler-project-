@@ -14,7 +14,7 @@ struct IrArgs {
 fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
     match prefix1 {
          "s" => {
-             if (isdisp == false) {
+             if (args.isdisp == false) {
                  let sib = 04 + (8 * args.reg2) + (4 * args.scale) + (8 * args.index) + (8 * args.base);
              }
              match command {
