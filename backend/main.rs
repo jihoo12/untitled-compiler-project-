@@ -20,7 +20,7 @@ fn findprefix(s: &String) -> usize {
 
     s.len()
 }
-fn ir(s: &String) {
+fn ir(prefix1: &String, prefix2: & String) {
     //i will add error handling 
     let word = first_word(s);
     let start_word = &s[..word];
