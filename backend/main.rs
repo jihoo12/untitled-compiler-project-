@@ -10,6 +10,7 @@ struct IrArgs {
     mem: String,
 }
 fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
+    let out;
     match prefix1 {
          "s" => {
              let sib;
@@ -20,20 +21,20 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
              }
              match command {
                 "mov" => {
-                   let out = 4889+sib;
+                   out = 4889+sib;
                 },
              }
          },
          "n" => {
              match command {
                  "init" => {
-                     println!("554889E5");
+                     out = 554889E5
                  },
                  "ret" => {
-                     println!("C3");
+                     out = C3
                  },
                  "clean" => {
-                     println!("4889EC5D");
+                     out = 4889EC5D
                  },
                  "syscall" => {
                      println!("0F05");
