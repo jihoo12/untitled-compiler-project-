@@ -4,9 +4,7 @@ struct IrArgs {
     scale: i8,
     index: i8,
     base: i8,
-    displacement32: i32,
     displacement8: i8,
-    isi8: bool,
     isdisp: bool,
     imm: i32,
     mem: String,
@@ -14,8 +12,11 @@ struct IrArgs {
 fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
     match prefix1 {
          "s" => {
+             let sib;
              if (args.isdisp == false) {
-                 let sib = 04 + (8 * args.reg2) + (4 * args.scale) + (8 * args.index) + (8 * args.base);
+                 sib = 04 + (8 * args.reg2) + (4 * args.scale) + (8 * args.index) + (8 * args.base);
+             }else {
+                 sib = 44 + (8*args.reg2)+(4*args.scale)+(8*args.index)+(8*args.base)+args.displacement8;
              }
              match command {
                 "mov" => {
