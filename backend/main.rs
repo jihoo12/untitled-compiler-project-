@@ -15,6 +15,7 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
              //only register available 
              // 48 89 
              // 00 000(reg) 100 00(scale) 000(index) 000(base)
+             
          },
          "n" => {
              match command {
