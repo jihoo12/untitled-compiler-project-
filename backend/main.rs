@@ -8,7 +8,7 @@ struct IrArgs {
     imm: i32,
     mem: String,
 }
-fn ir(prefix1: &str, prefix2: &str, command: &str,reg1: i32,reg2: i32,scale: i32,index: i32,base: i32, displacement: i32,imm: i32,mem: &str) {
+fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
     match prefix1 {
          "s" => {
              //prefix2= r
