@@ -20,7 +20,7 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
              }
              match command {
                 "mov" => {
-                   
+                   let out = 4889+sib;
                 },
              }
          },
@@ -59,7 +59,7 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
                      }
                      match command {
                          "mov" => {
-                   
+                             let out = 488B+sib;
                          },
                      }
                  },
