@@ -13,7 +13,7 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
     match prefix1 {
          "s" => {
              let sib;
-             if (args.isdisp == false) {
+             if !args.isdisp {
                  sib = 04 + (8 * args.reg2) + (4 * args.scale) + (8 * args.index) + (8 * args.base);
              }else {
                  sib = 44 + (8*args.reg2)+(4*args.scale)+(8*args.index)+(8*args.base)+args.displacement8;
