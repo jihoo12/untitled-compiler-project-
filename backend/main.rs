@@ -37,7 +37,7 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
                      out = 4889EC5D
                  },
                  "syscall" => {
-                     println!("0F05");
+                     out = 0F05
                  },
                  _ => {
                     println!("error syntax error");
@@ -60,14 +60,18 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
                      }
                      match command {
                          "mov" => {
-                             let out = 488B+sib;
+                             out = 488B+sib;
                          },
                      }
                  },
                  "n" => {},
                  "i" => {},
                  "r" => {
-                 
+                     match command {
+                         "mov" => {
+                            out = 4889C0+reg1+(8*reg2);
+                         },
+                     }
                  },
                  "r+i" => {},
                  "r-i" => {},
