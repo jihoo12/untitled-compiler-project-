@@ -5,7 +5,8 @@ struct IrArgs {
     index: i32,
     base: i32,
     displacement32: i32,
-    displacement8: i8
+    displacement8: i8,
+    isi8: bool,
     imm: i32,
     mem: String,
 }
