@@ -19,7 +19,12 @@ fn ir(prefix1: &str, prefix2: &str, command: &str,args: IrArgs) {
              // 48 89 
              // 00 000(reg) 100 00(scale) 000(index) 000(base)
              match command {
-                "mov"
+                "mov" = > {
+                    if (args.isdisp == TRUE) {
+
+}else {
+}
+                }
              }
          },
          "n" => {
